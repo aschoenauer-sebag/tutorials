@@ -20,7 +20,7 @@ There’s one more class which is very important for autograd
 implementation - a ``Function``. ``Tensor`` and ``Function`` are
 interconnected and build up an acyclic graph, that encodes a complete
 history of computation. Each variable has a ``.grad_fn`` attribute that
-references a function that has created a function (except for Tensors
+references a function that has created a variable (except for Tensors
 created by the user - these have ``None`` as ``.grad_fn``).
 
 If you want to compute the derivatives, you can call ``.backward()`` on
