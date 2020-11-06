@@ -137,7 +137,8 @@ if torch.cuda.is_available():
     # creates a LongTensor and transfers it
     # to GPU as torch.cuda.LongTensor
     a = torch.full((10,), 3, device=torch.device("cuda"))
-    print(type(a))
+    print(a.type())
     b = a.to(torch.device("cpu"))
+    print(b.type())
     # transfers it to CPU, back to
     # being a torch.LongTensor
